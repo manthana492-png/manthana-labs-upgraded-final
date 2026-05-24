@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0a3a40" />
+
+    <!-- GA4 (gtag.js) is loaded only after the user accepts cookies.
+         See src/components/consent/CookieConsent.tsx — it sets Consent Mode
+         defaults to "denied" and injects the gtag.js script on accept. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      // Consent Mode v2 defaults — denied until the user opts in.
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+
+    <!-- PWA / Installable App -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="application-name" content="Manthana-Labs" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- iOS / iPadOS install support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Manthana-Labs" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+
+    <!-- Windows / Edge tile -->
+    <meta name="msapplication-TileColor" content="#0a3a40" />
+    <meta name="msapplication-TileImage" content="/icons/icon-192.png" />
+
+    <title>Manthana-Labs — Clinical AI Imaging Co-Pilot for Doctors in India</title>
+    <meta name="description" content="Manthana-Labs by Quaasx 108: AI co-pilot for licensed clinicians. AI-assisted analysis across 128 medical imaging modalities — Allopathy + AYUSH. DICOM, multi-modality, comparison studies, and signed reports." />
+    <meta name="author" content="Manthana-Labs · Quaasx 108 Private Limited" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="keywords" content="medical AI, clinical AI, radiology AI, DICOM viewer, AI imaging, AYUSH, Allopathy, India radiology, AI medical reports, Manthana Labs, Quaasx 108" />
+
+    <!-- Canonical (per-page canonicals are also set client-side via Seo component) -->
+    <link rel="canonical" href="https://manthana.quaasx108.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Manthana-Labs" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:url" content="https://manthana.quaasx108.com/" />
+    <meta property="og:title" content="Manthana-Labs — Clinical AI Imaging Co-Pilot for Doctors in India" />
+    <meta property="og:description" content="AI-assisted analysis across 128 medical imaging modalities. Built for licensed clinicians in India by Quaasx 108 Private Limited." />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4d20a2af-8026-47f4-b381-d8379b90c0c0" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manthana-Labs — Clinical AI Imaging Co-Pilot" />
+    <meta name="twitter:description" content="AI-assisted analysis across 128 medical imaging modalities. Built for licensed clinicians in India." />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4d20a2af-8026-47f4-b381-d8379b90c0c0" />
+
+    <!-- JSON-LD: Organization + WebSite + SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://manthana.quaasx108.com/#org",
+          "name": "Quaasx 108 Private Limited",
+          "url": "https://manthana.quaasx108.com/",
+          "logo": "https://manthana.quaasx108.com/icons/icon-512.png",
+          "sameAs": ["https://manthana-labs.lovable.app"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://manthana.quaasx108.com/#website",
+          "url": "https://manthana.quaasx108.com/",
+          "name": "Manthana-Labs",
+          "publisher": { "@id": "https://manthana.quaasx108.com/#org" },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Manthana-Labs",
+          "applicationCategory": "MedicalApplication",
+          "operatingSystem": "Web, iOS, Android",
+          "description": "AI co-pilot for clinicians: AI-assisted analysis across 128 medical imaging modalities, DICOM, multi-modality, and signed reports.",
+          "image": "https://manthana.quaasx108.com/icons/icon-512.png",
+          "url": "https://manthana.quaasx108.com/",
+          "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "0" },
+          "publisher": { "@id": "https://manthana.quaasx108.com/#org" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

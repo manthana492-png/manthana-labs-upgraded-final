@@ -1,0 +1,434 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   MANTHANA IMAGING STUDIO — DESIGN SYSTEM
+   Clinical precision meets editorial elegance.
+   All colors HSL. Tier semantics are first-class tokens.
+   ============================================================================ */
+
+@layer base {
+  :root {
+    /* Surfaces — warm clinical paper, not sterile white */
+    --background: 36 30% 97%;
+    --surface: 36 24% 94%;
+    --surface-raised: 0 0% 100%;
+    --foreground: 195 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 30% 10%;
+
+    /* Primary — deep clinical teal, conveys precision + trust */
+    --primary: 184 76% 14%;
+    --primary-foreground: 36 30% 97%;
+    --primary-glow: 184 60% 28%;
+
+    --secondary: 195 20% 92%;
+    --secondary-foreground: 195 30% 15%;
+
+    --muted: 36 16% 92%;
+    --muted-foreground: 195 12% 38%;
+
+    --accent: 184 40% 90%;
+    --accent-foreground: 184 76% 14%;
+
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 14% 86%;
+    --input: 36 14% 86%;
+    --ring: 184 76% 24%;
+
+    --radius: 0.625rem;
+
+    /* === TIER TOKENS — first-class semantic colors === */
+    /* NVIDIA-Backed: validated, clinical green */
+    --tier-nvidia: 142 70% 28%;
+    --tier-nvidia-soft: 142 50% 94%;
+    --tier-nvidia-foreground: 142 70% 18%;
+    --tier-nvidia-border: 142 40% 70%;
+
+    /* Research-Assisted: transparent amber, NOT alarming */
+    --tier-research: 32 88% 38%;
+    --tier-research-soft: 38 90% 95%;
+    --tier-research-foreground: 28 80% 22%;
+    --tier-research-border: 36 70% 70%;
+
+    /* Hybrid (NVIDIA + Quaasx108) — vivid violet, signals real-time AI */
+    --tier-hybrid: 268 70% 44%;
+    --tier-hybrid-soft: 268 60% 96%;
+    --tier-hybrid-foreground: 268 70% 26%;
+    --tier-hybrid-border: 268 50% 78%;
+
+    /* Tier C critical warning — used ONLY for the mandatory red banner */
+    --warning-critical: 358 72% 46%;
+    --warning-critical-soft: 358 80% 96%;
+    --warning-critical-foreground: 358 70% 28%;
+    --warning-critical-border: 358 60% 80%;
+
+    /* Severity scale for findings */
+    --severity-low: 142 50% 38%;
+    --severity-medium: 38 88% 44%;
+    --severity-high: 18 80% 48%;
+    --severity-critical: 358 72% 46%;
+
+    /* Gradients & elevation */
+    --gradient-clinical: linear-gradient(135deg, hsl(184 76% 14%) 0%, hsl(195 70% 20%) 100%);
+    --gradient-paper: linear-gradient(180deg, hsl(36 30% 97%) 0%, hsl(36 24% 94%) 100%);
+    --gradient-tier-nvidia: linear-gradient(135deg, hsl(142 70% 28%) 0%, hsl(160 60% 32%) 100%);
+    --gradient-tier-research: linear-gradient(135deg, hsl(32 88% 38%) 0%, hsl(24 84% 44%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(184 60% 28% / 0.12), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(142 70% 28% / 0.08), transparent 50%);
+
+    --shadow-sm: 0 1px 2px hsl(195 30% 10% / 0.04), 0 1px 1px hsl(195 30% 10% / 0.03);
+    --shadow-md: 0 4px 12px -2px hsl(195 30% 10% / 0.06), 0 2px 4px hsl(195 30% 10% / 0.04);
+    --shadow-lg: 0 16px 40px -8px hsl(184 76% 14% / 0.12), 0 4px 12px hsl(195 30% 10% / 0.05);
+    --shadow-clinical: 0 24px 60px -12px hsl(184 76% 14% / 0.18), 0 0 0 1px hsl(184 30% 88%);
+
+    /* Motion */
+    --ease-clinical: cubic-bezier(0.32, 0.72, 0.24, 1);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+    --sidebar-background: 36 30% 97%;
+    --sidebar-foreground: 195 30% 15%;
+    --sidebar-primary: 184 76% 14%;
+    --sidebar-primary-foreground: 36 30% 97%;
+    --sidebar-accent: 36 24% 92%;
+    --sidebar-accent-foreground: 184 76% 14%;
+    --sidebar-border: 36 14% 86%;
+    --sidebar-ring: 184 76% 24%;
+
+    /* Image thumbnail backdrop — always dark for medical image clarity,
+       but tinted per theme so it harmonises with surrounding chrome. */
+    --image-backdrop: 195 30% 8%;
+    --image-backdrop-foreground: 36 30% 96%;
+  }
+
+  /* ============================================================
+     THEME: MODERN CLINIC — crisp white, sky-blue, high contrast
+     ============================================================ */
+  [data-theme="modern-clinic"] {
+    --background: 210 40% 99%;
+    --surface: 210 30% 96%;
+    --surface-raised: 0 0% 100%;
+    --foreground: 215 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 40% 12%;
+
+    --primary: 211 92% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 199 90% 56%;
+
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 215 40% 18%;
+
+    --muted: 210 24% 94%;
+    --muted-foreground: 215 16% 38%;
+
+    --accent: 199 90% 92%;
+    --accent-foreground: 211 92% 28%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 22% 88%;
+    --input: 210 22% 88%;
+    --ring: 211 92% 50%;
+
+    --gradient-clinical: linear-gradient(135deg, hsl(211 92% 42%) 0%, hsl(199 90% 56%) 100%);
+    --gradient-paper: linear-gradient(180deg, hsl(210 40% 99%) 0%, hsl(210 30% 96%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(199 90% 56% / 0.10), transparent 60%);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 40% 18%;
+    --sidebar-primary: 211 92% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 94%;
+    --sidebar-accent-foreground: 211 92% 28%;
+    --sidebar-border: 210 22% 88%;
+    --sidebar-ring: 211 92% 50%;
+
+    --image-backdrop: 215 40% 10%;
+    --image-backdrop-foreground: 0 0% 100%;
+  }
+
+  /* ============================================================
+     THEME: MIDNIGHT — true dark OLED, soft cool foreground
+     ============================================================ */
+  [data-theme="midnight"] {
+    --background: 222 28% 5%;
+    --surface: 222 24% 8%;
+    --surface-raised: 222 22% 11%;
+    --foreground: 210 30% 94%;
+
+    --card: 222 22% 10%;
+    --card-foreground: 210 30% 94%;
+
+    --popover: 222 22% 10%;
+    --popover-foreground: 210 30% 94%;
+
+    --primary: 199 90% 60%;
+    --primary-foreground: 222 28% 6%;
+    --primary-glow: 199 90% 70%;
+
+    --secondary: 222 18% 16%;
+    --secondary-foreground: 210 30% 94%;
+
+    --muted: 222 16% 14%;
+    --muted-foreground: 215 14% 68%;
+
+    --accent: 199 60% 18%;
+    --accent-foreground: 199 90% 80%;
+
+    --destructive: 358 72% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 16% 18%;
+    --input: 222 16% 18%;
+    --ring: 199 90% 60%;
+
+    --gradient-clinical: linear-gradient(135deg, hsl(222 40% 14%) 0%, hsl(222 30% 8%) 100%);
+    --gradient-paper: linear-gradient(180deg, hsl(222 28% 5%) 0%, hsl(222 24% 8%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(199 90% 50% / 0.14), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(268 70% 50% / 0.10), transparent 50%);
+
+    --sidebar-background: 222 28% 5%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 199 90% 60%;
+    --sidebar-primary-foreground: 222 28% 6%;
+    --sidebar-accent: 222 18% 14%;
+    --sidebar-accent-foreground: 199 90% 80%;
+    --sidebar-border: 222 16% 18%;
+    --sidebar-ring: 199 90% 60%;
+
+    --image-backdrop: 222 32% 3%;
+    --image-backdrop-foreground: 210 30% 94%;
+  }
+
+  /* ============================================================
+     THEME: SCI-FI — deep space navy with neon cyan/magenta
+     ============================================================ */
+  [data-theme="scifi"] {
+    --background: 230 50% 4%;
+    --surface: 232 44% 8%;
+    --surface-raised: 232 40% 11%;
+    --foreground: 180 100% 92%;
+
+    --card: 232 40% 10%;
+    --card-foreground: 180 100% 92%;
+
+    --popover: 232 40% 10%;
+    --popover-foreground: 180 100% 92%;
+
+    --primary: 184 100% 56%;
+    --primary-foreground: 230 50% 6%;
+    --primary-glow: 184 100% 70%;
+
+    --secondary: 232 36% 16%;
+    --secondary-foreground: 180 80% 92%;
+
+    --muted: 232 32% 14%;
+    --muted-foreground: 200 30% 72%;
+
+    --accent: 312 80% 22%;
+    --accent-foreground: 312 100% 86%;
+
+    --destructive: 348 100% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 232 40% 22%;
+    --input: 232 40% 18%;
+    --ring: 184 100% 60%;
+
+    --tier-nvidia: 142 90% 60%;
+    --tier-nvidia-soft: 142 60% 14%;
+    --tier-nvidia-foreground: 142 90% 84%;
+    --tier-nvidia-border: 142 60% 32%;
+
+    --tier-research: 38 100% 64%;
+    --tier-research-soft: 38 60% 14%;
+    --tier-research-foreground: 38 100% 84%;
+    --tier-research-border: 38 60% 32%;
+
+    --tier-hybrid: 280 100% 70%;
+    --tier-hybrid-soft: 280 60% 18%;
+    --tier-hybrid-foreground: 280 100% 88%;
+    --tier-hybrid-border: 280 60% 38%;
+
+    --warning-critical: 348 100% 64%;
+    --warning-critical-soft: 348 60% 14%;
+    --warning-critical-foreground: 348 100% 86%;
+    --warning-critical-border: 348 60% 34%;
+
+    --gradient-clinical: linear-gradient(135deg, hsl(184 100% 30%) 0%, hsl(280 90% 36%) 100%);
+    --gradient-paper: linear-gradient(180deg, hsl(230 50% 4%) 0%, hsl(232 44% 8%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(184 100% 50% / 0.18), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(312 100% 50% / 0.14), transparent 55%),
+                       radial-gradient(ellipse at center, hsl(280 100% 50% / 0.06), transparent 70%);
+
+    --shadow-clinical: 0 24px 60px -12px hsl(184 100% 50% / 0.18), 0 0 0 1px hsl(184 80% 30% / 0.4);
+
+    --sidebar-background: 230 50% 4%;
+    --sidebar-foreground: 180 80% 90%;
+    --sidebar-primary: 184 100% 56%;
+    --sidebar-primary-foreground: 230 50% 6%;
+    --sidebar-accent: 232 36% 14%;
+    --sidebar-accent-foreground: 184 100% 80%;
+    --sidebar-border: 232 40% 22%;
+    --sidebar-ring: 184 100% 60%;
+
+    --image-backdrop: 230 60% 2%;
+    --image-backdrop-foreground: 180 100% 92%;
+  }
+
+  .dark,
+  [data-theme="dark"] {
+    --background: 195 35% 6%;
+    --surface: 195 30% 9%;
+    --surface-raised: 195 28% 12%;
+    --foreground: 36 24% 94%;
+
+    --card: 195 28% 11%;
+    --card-foreground: 36 24% 94%;
+
+    --popover: 195 28% 11%;
+    --popover-foreground: 36 24% 94%;
+
+    --primary: 184 60% 56%;
+    --primary-foreground: 195 35% 6%;
+    --primary-glow: 184 60% 64%;
+
+    --secondary: 195 24% 16%;
+    --secondary-foreground: 36 24% 94%;
+
+    --muted: 195 20% 14%;
+    --muted-foreground: 195 14% 62%;
+
+    --accent: 184 40% 18%;
+    --accent-foreground: 184 60% 80%;
+
+    --destructive: 358 72% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 195 20% 18%;
+    --input: 195 20% 18%;
+    --ring: 184 60% 56%;
+
+    --tier-nvidia: 142 60% 50%;
+    --tier-nvidia-soft: 142 40% 14%;
+    --tier-nvidia-foreground: 142 60% 78%;
+    --tier-nvidia-border: 142 40% 30%;
+
+    --tier-research: 32 88% 60%;
+    --tier-research-soft: 32 50% 14%;
+    --tier-research-foreground: 32 80% 78%;
+    --tier-research-border: 32 50% 30%;
+
+    --tier-hybrid: 268 70% 64%;
+    --tier-hybrid-soft: 268 40% 16%;
+    --tier-hybrid-foreground: 268 70% 84%;
+    --tier-hybrid-border: 268 40% 36%;
+
+    --warning-critical: 358 80% 62%;
+    --warning-critical-soft: 358 50% 14%;
+    --warning-critical-foreground: 358 80% 84%;
+    --warning-critical-border: 358 50% 32%;
+
+    --gradient-clinical: linear-gradient(135deg, hsl(184 60% 18%) 0%, hsl(195 50% 12%) 100%);
+    --gradient-paper: linear-gradient(180deg, hsl(195 35% 6%) 0%, hsl(195 30% 9%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(184 60% 40% / 0.15), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(142 60% 40% / 0.08), transparent 50%);
+
+    --image-backdrop: 195 40% 4%;
+    --image-backdrop-foreground: 36 24% 94%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+    color: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  .surface-clinical {
+    background: hsl(var(--surface-raised));
+    box-shadow: var(--shadow-clinical);
+    border-radius: calc(var(--radius) + 4px);
+  }
+  .glass-clinical {
+    background: hsl(var(--surface-raised) / 0.72);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+  .tier-stripe-nvidia {
+    background: var(--gradient-tier-nvidia);
+  }
+  .tier-stripe-research {
+    background: var(--gradient-tier-research);
+  }
+  .focus-ring {
+    @apply outline-none ring-offset-background transition-shadow;
+  }
+  .focus-ring:focus-visible {
+    box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .bg-aurora {
+    background-image: var(--gradient-aurora);
+  }
+  .bg-gradient-clinical {
+    background-image: var(--gradient-clinical);
+  }
+  .bg-gradient-paper {
+    background-image: var(--gradient-paper);
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+}

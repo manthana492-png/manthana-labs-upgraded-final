@@ -1,0 +1,62 @@
+{
+  "name": "Manthana-Labs — Clinical AI Imaging Co-Pilot",
+  "short_name": "Manthana-Labs",
+  "description": "AI-assisted analysis across 128 medical imaging modalities. Built for licensed clinicians by Quaasx 108 Private Limited.",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0a3a40",
+  "theme_color": "#0a3a40",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["medical", "health", "productivity", "business"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Study",
+      "short_name": "New",
+      "url": "/app/new",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Worklist",
+      "short_name": "History",
+      "url": "/app/history",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Live Capture",
+      "short_name": "Live",
+      "url": "/app/live",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

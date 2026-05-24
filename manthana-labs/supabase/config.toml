@@ -1,0 +1,82 @@
+project_id = "eqqwfdublzolqrfwzszc"
+
+[functions.search-medical-codes]
+verify_jwt = false
+
+[functions.generate-patient-summary]
+verify_jwt = false
+
+[functions.sign-report]
+verify_jwt = true
+
+[functions.verify-council]
+verify_jwt = true
+
+[functions.domain-report-chat]
+verify_jwt = false
+
+[functions.translate-report]
+verify_jwt = false
+
+[functions.check-and-consume-quota]
+verify_jwt = true
+
+[functions.razorpay-create-subscription]
+verify_jwt = true
+
+[functions.razorpay-verify-payment]
+verify_jwt = true
+
+[functions.razorpay-webhook]
+verify_jwt = false
+
+[functions.request-emergency-scan]
+verify_jwt = true
+
+[functions.submit-camp-application]
+verify_jwt = true
+
+[functions.upload-study]
+verify_jwt = true
+
+[functions.detect-and-brief]
+verify_jwt = true
+
+[functions.analyze-study]
+verify_jwt = true
+
+[functions.analyze-study-callback]
+verify_jwt = false
+
+[functions.get-study]
+verify_jwt = true
+
+[functions.confirm-review]
+verify_jwt = true
+
+[functions.generate-pdf]
+verify_jwt = true
+
+[functions.audit-log]
+verify_jwt = true
+
+[functions.dicom-ingest]
+verify_jwt = false
+
+[functions.dicom-export]
+verify_jwt = true
+
+[functions.fhir-push]
+verify_jwt = true
+
+[functions.pacs-verify]
+verify_jwt = true
+
+[functions.analyze-dicom-study]
+verify_jwt = true
+
+[functions.ocr-certificate]
+verify_jwt = false
+
+[functions.process-email-queue]
+verify_jwt = true
